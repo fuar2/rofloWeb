@@ -1,0 +1,142 @@
+/* Контейнер слайдера */
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Обёртка для слайдов */
+.slider-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Каждый отдельный слайд */
+.slider-item {
+    flex: 0 0 100%; /* Каждый слайд занимает 100% ширины контейнера */
+    transition: transform 0.5s ease; /* Плавный переход между слайдами */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Кнопки слайдера */
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff8000;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 5px 10px;
+}
+.slider-prev { left: -40px; }
+.slider-next { right: -40px; }
+
+li{
+  list-style-type: none;
+}
+  body {
+ background: #f8f8f8; /* цвет фона страницы */
+   color: #1E1E24;
+  font-family: "Arial", serif;
+ 
+}
+a {
+  color: black;
+  text-decoration: underline dotted;
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 800;
+
+}
+.katalogItem {
+ border: 5px orange double; /* стили рамки */
+}
+.katalogItem h1{
+  background: #eaeaea;
+  font-weight: 400;
+ color: black; /* цвет текста параграфов */
+ font-size: 18px; /* размер шрифта */
+}
+.katalogItem p{
+  line-height: 16px;
+  font-style: italic;
+ color: #707070; /* цвет текста параграфов */
+ font-size: 14px; /* размер шрифта */
+}
+
+.kontakt{
+  position: relative;
+top: -100px;
+  left: 80px;
+}
+.itemObj{
+  color: #484343;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+.asd{
+  display: flex;
+      align-items: center;
+}
+/* Кнопка корзины */
+#cart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #ff8000;
+    color: white;
+    font-size: 20px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+/* Модальное окно корзины */
+#cart-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+#cart-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
